@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/bg"
+    tools:context=".fragments.SearchItem" >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inventory_search_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/sm_margin"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="@dimen/input_radius"
+        app:boxCornerRadiusBottomStart="@dimen/input_radius"
+        app:boxCornerRadiusTopEnd="@dimen/input_radius"
+        app:boxCornerRadiusTopStart="@dimen/input_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/search">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:hint="Search"
+            android:inputType="text"
+            android:paddingTop="@dimen/input_padding"
+            android:paddingBottom="@dimen/input_padding" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inventory_search_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/sm_margin"
+        android:layout_marginTop="@dimen/sm_margin"
+        android:layout_marginEnd="@dimen/sm_margin"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inventory_search_input">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/inventory_search_empty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/sm_margin"
+        android:layout_marginTop="@dimen/sm_margin"
+        android:layout_marginEnd="@dimen/sm_margin"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inventory_search_input">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_height"
+            android:src="@drawable/search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_search"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inventory_search_none"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/sm_margin"
+        android:layout_marginTop="@dimen/sm_margin"
+        android:layout_marginEnd="@dimen/sm_margin"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inventory_search_input">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_height"
+            android:src="@drawable/search_none" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/none_search"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/inventory_search_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/orange"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inventory_search_input" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

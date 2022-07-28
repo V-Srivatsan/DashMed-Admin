@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sm_margin">10dp</dimen>
+    <dimen name="md_margin">40dp</dimen>
+
+    <dimen name="card_radius">15dp</dimen>
+    <dimen name="card_padding">20dp</dimen>
+    <dimen name="card_margin">25dp</dimen>
+
+    <dimen name="input_radius">5dp</dimen>
+    <dimen name="input_padding">17dp</dimen>
+
+    <dimen name="progress_size">25dp</dimen>
+
+    <dimen name="card_height">65dp</dimen>
+    <dimen name="actions_height">75dp</dimen>
+
+    <dimen name="empty_state_height">250dp</dimen>
+    <dimen name="empty_state">100dp</dimen>
+
+    <dimen name="modal_scroll_height">325dp</dimen>
+</resources>

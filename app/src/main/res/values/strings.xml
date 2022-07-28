@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">DashMed for Admins</string>
+
+    <string name="network_error">Something went wrong! Please check your network connection and try again!</string>
+    <string name="remove_employee_prompt">Deleting this employee will result in all the data associated with this employee being permanently deleted. This action is irreversible. Are you sure you want to proceed?</string>
+    <string name="remove_item_prompt">Removing this item from the inventory will result in orders specific to this item being diverted to other warehouses. This action is irreversible. Are you sure you want to remove this item?</string>
+    <string name="password_prompt">For security purposes, you need to enter your password in order to proceed.</string>
+
+    <string name="empty_search">Search for products using the search bar above!</string>
+    <string name="none_search">No products were found! Please try with a different set of keywords!</string>
+
+    <string name="empty_employees">No registered employees?! Add one now!</string>
+    <string name="empty_attendance">It appears that no entry has been registered on this day! If this is not right, add an entry now!</string>
+    <string name="empty_inventory">Seems like your inventory is empty! Add items using the button below!</string>
+
+</resources>

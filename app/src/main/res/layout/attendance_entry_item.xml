@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/add_entry_checkbox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/sm_margin"
+    android:layout_marginEnd="@dimen/sm_margin"
+    android:layout_marginBottom="@dimen/sm_margin"
+    android:layout_weight="1"
+    android:backgroundTint="@color/teal_700"
+    android:buttonTint="@color/teal_700"
+    android:text="Name"
+    android:textSize="16sp" />

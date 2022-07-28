@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/card_margin"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/merienda_one"
+            android:text="Add Entry"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sm_margin"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/input_radius"
+            app:boxCornerRadiusBottomStart="@dimen/input_radius"
+            app:boxCornerRadiusTopEnd="@dimen/input_radius"
+            app:boxCornerRadiusTopStart="@dimen/input_radius"
+            app:startIconDrawable="@drawable/search">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_entry_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:hint="Search"
+                android:inputType="text"
+                android:paddingTop="@dimen/input_padding"
+                android:paddingBottom="@dimen/input_padding" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/add_entry_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/modal_scroll_height"
+            android:layout_marginTop="@dimen/sm_margin" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/sm_margin"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/add_entry_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/sm_margin"
+                android:layout_weight="1"
+                android:backgroundTint="@color/teal_700"
+                android:text="cancel" />
+
+            <Button
+                android:id="@+id/add_entry_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sm_margin"
+                android:layout_weight="1"
+                android:text="done" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
