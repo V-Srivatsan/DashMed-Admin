@@ -51,6 +51,14 @@
             app:srcCompat="@drawable/expired" />
 
         <ImageView
+            android:id="@+id/med_item_warning"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:visibility="gone"
+            app:srcCompat="@drawable/warning" />
+
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2.5"

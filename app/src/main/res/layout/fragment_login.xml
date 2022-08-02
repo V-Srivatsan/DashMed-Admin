@@ -58,6 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="@dimen/sm_margin"
+                android:layout_marginBottom="@dimen/card_margin"
                 app:boxBackgroundMode="outline"
                 app:boxCornerRadiusBottomEnd="@dimen/input_radius"
                 app:boxCornerRadiusBottomStart="@dimen/input_radius"
@@ -80,7 +81,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/md_margin"
-                android:layout_marginTop="@dimen/card_margin"
                 android:layout_marginEnd="@dimen/md_margin"
                 android:text="Login" />
 
@@ -88,7 +88,7 @@
                 android:id="@+id/login_progress"
                 style="?android:attr/progressBarStyle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/progress_size"
                 android:indeterminateTint="@color/orange"
                 android:visibility="gone" />
         </LinearLayout>

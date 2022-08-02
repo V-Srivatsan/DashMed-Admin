@@ -16,10 +16,6 @@ import com.dashmed.admin.fragments.Settings
 
 class MainActivity : AppCompatActivity() {
 
-    companion object {
-        var reloadFragment: Boolean? = null
-    }
-
     private lateinit var binding: ActivityMainBinding
     private var currId: Int = R.id.nav_employees
 
@@ -28,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         if (Utils.getUID(this) == null) {
             startActivity(Intent(this, LoginActivity::class.java))
+            this.finish()
         }
 
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -39,22 +36,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.bottomNav.setOnItemReselectedListener { false }
-    }
-
-    override fun onResume() {
-        super.onResume()
-
-        reloadFragment?.let {
-            if (Utils.getUID(this) == null)
-                this.finish()
-
-            if (it) {
-                if (binding.bottomNav.selectedItemId == R.id.nav_employees)
-                    replaceFragment(R.id.nav_employees)
-                else
-                    binding.bottomNav.selectedItemId = R.id.nav_employees
-            }
-        }
     }
 
     private fun replaceFragment(itemId: Int) {
@@ -75,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                     if (currId == R.id.nav_settings)
                         setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right)
                     else
-                        setCustomAnimations(R.anim.slide_out_right, R.anim.slide_out_left)
+                        setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left)
                     replace(R.id.main_container, Inventory())
                 }
                 R.id.nav_settings -> {

@@ -132,6 +132,7 @@ class Settings : Fragment() {
                 apply()
             }
             requireActivity().startActivity(Intent(requireActivity(), LoginActivity::class.java))
+            requireActivity().finish()
         }
 
         binding.settingsPassword

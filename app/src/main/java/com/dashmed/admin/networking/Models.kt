@@ -20,6 +20,7 @@ data class InventoryItem (
     @Json(name = "composition") var composition: List<String>,
     @Json(name = "expiration") var expiration: Int,
     @Json(name = "cost") var cost: Float,
+    @Json(name = "min_quantity") var min_quantity: Int,
     @Json(name = "manufactured") var manufactured: String,
     @Json(name = "quantity") var quantity: Int
 )
@@ -30,5 +31,5 @@ data class Medicine (
     @Json(name = "description") var description: String,
     @Json(name = "composition") var composition: List<String>,
     @Json(name = "expiration") var expiration: Int,
-    @Json(name = "cost") var cost: Float
+    @Json(name = "cost") var cost: Float,
 )

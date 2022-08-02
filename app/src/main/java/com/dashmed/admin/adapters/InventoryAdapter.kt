@@ -30,6 +30,7 @@ class InventoryAdapter(
         val quantity: TextView = view.findViewById(R.id.med_item_quantity)
         val cost: TextView = view.findViewById(R.id.med_item_cost)
         val expired: ImageView = view.findViewById(R.id.med_item_expired)
+        val warning: ImageView = view.findViewById(R.id.med_item_warning)
 
         lateinit var med: InventoryItem
         init { view.setOnClickListener(this) }
@@ -41,7 +42,6 @@ class InventoryAdapter(
                 val manufactured: CalendarView? = dialog.findViewById(R.id.med_info_manufactured)
                 val quantity: TextInputLayout? = dialog.findViewById(R.id.med_info_quantity)
                 val progress: ProgressBar? = dialog.findViewById(R.id.med_info_progress)
-                val expired: ImageView? = dialog.findViewById(R.id.med_item_expired)
 
                 dialog.findViewById<TextView>(R.id.med_info_name)?.text = med.name
                 dialog.findViewById<TextView>(R.id.med_info_cost)?.text = "${med.cost} INR"
@@ -118,6 +118,9 @@ class InventoryAdapter(
         holder.cost.text = "${item.cost} INR"
         holder.med = item
 
+        if (item.quantity < item.min_quantity)
+            holder.warning.visibility = View.VISIBLE
+
         val calendar = Calendar.getInstance()
         val minDate = Utils.getDateDiff(
             item.expiration, calendar.get(Calendar.DATE),
@@ -126,7 +129,7 @@ class InventoryAdapter(
         val manDate = SimpleDateFormat("yyyy-MM-dd").parse(item.manufactured).time
 
         if (minDate > manDate) {
-            holder.expired?.visibility = View.VISIBLE
+            holder.expired.visibility = View.VISIBLE
         }
     }
 

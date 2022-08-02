@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
-                android:hint="Phone"
+                android:hint="Phone (+91 1234567890)"
                 android:inputType="text|phone"
                 android:paddingTop="@dimen/input_padding"
                 android:paddingBottom="@dimen/input_padding" />

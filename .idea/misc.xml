@@ -35,8 +35,11 @@
         <entry key="..\:/Users/Vatsan/OneDrive/Desktop/DashMedForAdmins/app/src/main/res/layout/search_med.xml" value="0.33" />
         <entry key="..\:/Users/Vatsan/OneDrive/Desktop/DashMedForAdmins/app/src/main/res/menu/bottom_nav.xml" value="0.33177083333333335" />
         <entry key="app/src/main/res/drawable/expired.xml" value="0.327" />
+        <entry key="app/src/main/res/drawable/warning.xml" value="0.325" />
+        <entry key="app/src/main/res/layout/add_employee_dialog.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/layout/attendance_entry_item.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/layout/fragment_inventory.xml" value="0.3697916666666667" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/layout/med_item.xml" value="0.3697916666666667" />
       </map>
     </option>
